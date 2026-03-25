@@ -253,6 +253,39 @@
     },
     {
       "number": "06",
+      "title": "Mini Google: Full-Stack Search Engine in C/C++",
+      "category": "Systems Programming · C / C++",
+      "summary": "A full-stack search engine built entirely from scratch in C and C++, from custom data structures to a browser-accessible web interface. Type a query in your browser and ranked results come back in milliseconds — served dynamically from disk.",
+      "problem": "Modern search engines abstract away everything: data structures, disk I/O, indexing, HTTP, and concurrency. Understanding how they actually work means building each layer yourself, with no framework to catch mistakes.",
+      "solution": [
+        "Data structures (C): Built LinkedList and HashTable from scratch with iterators and destructors — the foundation every other module depends on.",
+        "In-memory index (C): FileParser extracts word positions from documents; CrawlFileTree walks directories; DocTable maps file paths to numeric doc IDs; MemIndex is a full inverted index (word → doc ID → offsets list).",
+        "Disk-based index (C++): WriteIndex serializes DocTable and MemIndex to disk; IndexTableReader reconstructs them with byte-offset parsing, memory mapping, and endianness handling.",
+        "Web server (C++): Thread pool handles concurrent TCP connections; QueryProcessor ranks multi-term queries from disk indices; HTTP layer routes dynamic search results and static files with XSS escaping and path sanitization."
+      ],
+      "why": "CSE333 is the course that made systems programming click. Every abstraction I'd taken for granted — hash maps, search indices, web servers, memory safety — I had to build and debug myself. Valgrind found the leaks. The browser found the bugs.",
+      "results": [
+        "Custom LinkedList and HashTable in C, used end-to-end across all modules",
+        "In-memory inverted index with word-level positional data and ranked query results",
+        "Disk-based index with byte-offset management, endianness handling, and memory mapping",
+        "Multi-threaded HTTP/1.1 server with thread pool serving live search from browser",
+        "XSS escaping and directory traversal prevention for real security hardening",
+        "Verified memory-safe throughout with Valgrind"
+      ],
+      "tools": [
+        "C",
+        "C++",
+        "POSIX Threads",
+        "TCP Sockets",
+        "Google Test",
+        "Valgrind"
+      ],
+      "featured": true,
+      "github": "https://github.com/khaitr23",
+      "live": ""
+    },
+    {
+      "number": "07",
       "title": "Yoga by GiGi: Instructor Portfolio Website & CMS",
       "category": "Web · Headless CMS · Client Work",
       "summary": "A Next.js website for a yoga instructor with a Contentful-powered CMS, letting the client manage blogs, retreats, and pages without touching code.",

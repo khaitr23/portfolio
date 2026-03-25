@@ -129,7 +129,7 @@ function TagItem({ item, i, dragging, dropIdx, setDragging, setDropIdx, onRemove
 function BulletList({ label, items, onChange }: { label: string; items: string[]; onChange: (v: string[]) => void }) {
   return (
     <div>
-      <label className="block text-xs text-slate-500 font-mono uppercase tracking-wider mb-1.5">{label}</label>
+      {label && <label className="block text-xs text-slate-500 font-mono uppercase tracking-wider mb-1.5">{label}</label>}
       <div className="space-y-2">
         {items.map((item, i) => (
           <div key={i} className="flex gap-2">
@@ -146,6 +146,31 @@ function BulletList({ label, items, onChange }: { label: string; items: string[]
           <Plus size={12} /> Add bullet
         </button>
       </div>
+    </div>
+  );
+}
+
+function SolutionField({ value, onChange }: { value: string | string[]; onChange: (v: string | string[]) => void }) {
+  const isBullets = Array.isArray(value);
+  return (
+    <div>
+      <div className="flex items-center justify-between mb-1.5">
+        <label className="block text-xs text-slate-500 font-mono uppercase tracking-wider">The Solution</label>
+        <button
+          onClick={() => onChange(isBullets ? (value as string[]).join(" ") : (value as string).split(/\.\s+/).filter(Boolean).map(s => s.endsWith(".") ? s : s + "."))}
+          className="text-xs font-mono text-emerald-500 hover:text-emerald-400 transition-colors"
+        >
+          {isBullets ? "Switch to prose" : "Switch to bullets"}
+        </button>
+      </div>
+      {isBullets ? (
+        <BulletList label="" items={value as string[]} onChange={onChange} />
+      ) : (
+        <textarea rows={4} value={value as string}
+          onChange={(e) => onChange(e.target.value)}
+          className="w-full bg-white/3 border border-white/8 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-emerald-500/40 transition-all resize-none placeholder-slate-600"
+        />
+      )}
     </div>
   );
 }
@@ -345,7 +370,10 @@ function ProjectItem({ p, i, isOpen, onToggle, onUpdate, onRemove, dragging, dro
             >⠿</span>
             <span className="text-emerald-500/40 font-mono text-sm">{p.number}</span>
             <div>
-              <p className="text-white text-sm font-medium">{p.title}</p>
+              <div className="flex items-center gap-2">
+                <p className={`text-sm font-medium ${p.hidden ? "text-slate-500 line-through" : "text-white"}`}>{p.title}</p>
+                {p.hidden && <span className="text-xs font-mono text-red-400/70 bg-red-500/10 px-1.5 py-0.5 rounded">hidden</span>}
+              </div>
               <p className="text-slate-500 text-xs font-mono">{p.category}</p>
             </div>
           </div>
@@ -362,7 +390,10 @@ function ProjectItem({ p, i, isOpen, onToggle, onUpdate, onRemove, dragging, dro
             <Field label="Title" value={p.title} onChange={(v) => onUpdate({ ...p, title: v })} />
             <Field label="Summary" value={p.summary} onChange={(v) => onUpdate({ ...p, summary: v })} multiline />
             <Field label="The Problem" value={p.problem} onChange={(v) => onUpdate({ ...p, problem: v })} multiline />
-            <Field label="The Solution" value={p.solution} onChange={(v) => onUpdate({ ...p, solution: v })} multiline />
+            <SolutionField
+              value={p.solution}
+              onChange={(v) => onUpdate({ ...p, solution: v })}
+            />
             <Field label="Why I Built This" value={p.why} onChange={(v) => onUpdate({ ...p, why: v })} multiline />
             <BulletList label="Results" items={p.results} onChange={(v) => onUpdate({ ...p, results: v })} />
             <TagList label="Tools" items={p.tools} onChange={(v) => onUpdate({ ...p, tools: v })} />
@@ -370,10 +401,16 @@ function ProjectItem({ p, i, isOpen, onToggle, onUpdate, onRemove, dragging, dro
               <Field label="GitHub URL" value={p.github} onChange={(v) => onUpdate({ ...p, github: v })} mono />
               <Field label="Live URL" value={p.live} onChange={(v) => onUpdate({ ...p, live: v })} mono />
             </div>
-            <label className="flex items-center gap-2 cursor-pointer">
-              <input type="checkbox" checked={p.featured} onChange={(e) => onUpdate({ ...p, featured: e.target.checked })} className="accent-emerald-500" />
-              <span className="text-xs text-slate-400 font-mono">Featured project</span>
-            </label>
+            <div className="flex items-center gap-6">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" checked={p.featured} onChange={(e) => onUpdate({ ...p, featured: e.target.checked })} className="accent-emerald-500" />
+                <span className="text-xs text-slate-400 font-mono">Featured project</span>
+              </label>
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" checked={!!p.hidden} onChange={(e) => onUpdate({ ...p, hidden: e.target.checked })} className="accent-red-500" />
+                <span className="text-xs text-slate-400 font-mono">Hide from site</span>
+              </label>
+            </div>
           </div>
         )}
       </div>

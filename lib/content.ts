@@ -27,11 +27,12 @@ export type Project = {
   category: string;
   summary: string;
   problem: string;
-  solution: string;
+  solution: string | string[];
   why: string;
   results: string[];
   tools: string[];
   featured: boolean;
+  hidden?: boolean;
   github: string;
   live: string;
 };

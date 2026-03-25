@@ -44,7 +44,18 @@ function CaseStudyModal({ project, onClose }: { project: Project; onClose: () =>
         ].map(({ label, content }) => (
           <div key={label} className="mb-6">
             <p className="text-xs font-mono text-emerald-500 uppercase tracking-wider mb-2">{label}</p>
-            <p className="text-slate-300 text-sm leading-relaxed">{content}</p>
+            {Array.isArray(content) ? (
+              <ul className="space-y-2">
+                {content.map((item: string, i: number) => (
+                  <li key={i} className="flex gap-2 text-sm text-slate-300">
+                    <ChevronRight size={14} className="text-emerald-400 mt-0.5 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-slate-300 text-sm leading-relaxed">{content}</p>
+            )}
           </div>
         ))}
 
@@ -112,7 +123,7 @@ export default function Projects({ data }: Props) {
       <div className="h-px bg-emerald-500/10 mb-12" />
 
       <div className="space-y-6">
-        {data.map((project, i) => (
+        {data.filter(p => !p.hidden).map((project, i) => (
           <motion.div
             key={project.number}
             initial={{ opacity: 0, y: 32 }}
