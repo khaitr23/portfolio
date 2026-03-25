@@ -148,7 +148,7 @@
         "Statistics"
       ],
       "featured": true,
-      "github": "https://github.com/khaitr23",
+      "github": "",
       "live": "https://risk-vs-return-de120f.pages.cs.washington.edu/"
     },
     {
@@ -173,7 +173,7 @@
         "Deadlock Detection"
       ],
       "featured": true,
-      "github": "https://github.com/khaitr23",
+      "github": "",
       "live": ""
     },
     {
@@ -197,7 +197,7 @@
         "Computer Vision"
       ],
       "featured": false,
-      "github": "https://github.com/khaitr23",
+      "github": "https://github.com/khaitr23/WasteSortingTrain",
       "live": ""
     },
     {
@@ -222,7 +222,7 @@
         "Cypher"
       ],
       "featured": true,
-      "github": "https://github.com/khaitr23",
+      "github": "https://github.com/khaitr23/AstraPath",
       "live": ""
     },
     {
@@ -248,7 +248,7 @@
         "Git"
       ],
       "featured": true,
-      "github": "https://github.com/khaitr23",
+      "github": "https://github.com/karlabelem/DUET",
       "live": ""
     },
     {
@@ -281,7 +281,7 @@
         "Valgrind"
       ],
       "featured": true,
-      "github": "https://github.com/khaitr23",
+      "github": "",
       "live": ""
     },
     {
@@ -307,8 +307,8 @@
         "CSS Modules"
       ],
       "featured": false,
-      "github": "https://github.com/khaitr23",
-      "live": ""
+      "github": "https://github.com/khaitr23/yoga-by-gigi",
+      "live": "https://yoga-by-gigi.vercel.app/"
     }
   ],
   "skills": {
@@ -462,7 +462,7 @@
     ]
   },
   "contact": {
-    "headline": "Let's build something",
+    "headline": "Let's build something...",
     "subtext": "I'm actively seeking full-time roles in software or data engineering for June 2026. If you have an opportunity, project idea, or just want to connect, feel free to reach out!"
   }
 }
