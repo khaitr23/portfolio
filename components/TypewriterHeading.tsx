@@ -23,12 +23,12 @@ function renderWithHighlights(text: string, highlights: Highlight[]) {
   const lines = text.split("\n");
   return lines.map((line, li, allLines) => {
     // Build segments for this line
-    let segments: React.ReactNode[] = [line];
+    let segments: Array<string | React.ReactElement> = [line];
     for (const { word, className } of highlights) {
-      segments = segments.flatMap((seg) => {
+      segments = segments.flatMap((seg): Array<string | React.ReactElement> => {
         if (typeof seg !== "string") return [seg];
         const parts = seg.split(word);
-        return parts.flatMap((part, i) =>
+        return parts.flatMap((part, i): Array<string | React.ReactElement> =>
           i < parts.length - 1
             ? [part, <span key={`${word}-${i}`} className={className}>{word}</span>]
             : [part]
