@@ -1,0 +1,435 @@
+{
+  "hero": {
+    "badge": "Open to opportunities · June 2026",
+    "name": "Keegan Tran",
+    "role": "Software & Data Engineer",
+    "tagline": "CS & Financial Economics @ University of Washington\nBuilding pipelines, ML systems, and data-driven applications that turn complexity into clarity.",
+    "github": "https://github.com/khaitr23",
+    "linkedin": "https://linkedin.com/in/khaitr",
+    "email": "khaitr23@uw.edu"
+  },
+  "about": {
+    "headline": "Building at the\nintersection of\ndata & software.",
+    "bio1": "I'm Keegan, a Computer Science and Financial Economics student at the University of Washington graduating June 2026. I combine rigorous quantitative thinking with hands-on engineering from NLP research pipelines to hardware validation automation.",
+    "bio2": "My work spans the full stack: Python automation, machine learning models, distributed databases, and interactive data visualizations. I care deeply about the \"why\" when programming systems that are measurably better, not just technically correct.",
+    "stats": [
+      {
+        "value": "3.7",
+        "label": "GPA",
+        "sub": "Dean's List"
+      },
+      {
+        "value": "4+",
+        "label": "Years",
+        "sub": "Engineering"
+      },
+      {
+        "value": "15+",
+        "label": "Engineers",
+        "sub": "Adopted my tools"
+      },
+      {
+        "value": "100k+",
+        "label": "Records",
+        "sub": "NLP pipeline"
+      }
+    ],
+    "interests": [
+      "UW Judo Team",
+      "Intramural Soccer Captain",
+      "Cover Band Guitarist"
+    ],
+    "education": {
+      "school": "University of Washington",
+      "degree": "B.S. Computer Science & Financial Economics",
+      "location": "Seattle, WA",
+      "graduation": "Graduating June 2026",
+      "award": "Microsoft Endowed Scholar"
+    }
+  },
+  "experience": [
+    {
+      "title": "Test Engineer Intern",
+      "company": "Fabrinet",
+      "location": "Santa Clara, CA",
+      "period": "Jun 2025 – Sep 2025",
+      "type": "Internship",
+      "impact": "15+ engineers · 100+ PCB runs/week",
+      "bullets": [
+        "Developed Python automation tools that parse In-Circuit Testing machine logs into structured datasets, converting raw measurements into analyzable CSV outputs.",
+        "Implemented configurable test selection, multi-measurement parsing, and automated failure alerts.",
+        "Solution adopted by 15+ engineers to analyze 100+ PCB test runs weekly, improving debugging speed and reliability of hardware validation workflows."
+      ],
+      "tags": [
+        "Python",
+        "Automation",
+        "CSV",
+        "ICT",
+        "Hardware Validation"
+      ]
+    },
+    {
+      "title": "NLP Research Assistant",
+      "company": "UW Medical Center",
+      "location": "Seattle, WA",
+      "period": "Jun 2024 – Jan 2025",
+      "type": "Research",
+      "impact": "100k+ abstracts clustered",
+      "bullets": [
+        "Built an NLP pipeline using BERTopic to cluster 100k+ National Cancer Institute grant abstracts, enabling large-scale topic discovery for research prioritization.",
+        "Applied Elbow Method and clustering evaluation to determine optimal topic granularity.",
+        "Visualized funding allocation patterns using Altair, identifying spending trends across research domains."
+      ],
+      "tags": [
+        "Python",
+        "BERTopic",
+        "NLP",
+        "Altair",
+        "Data Visualization"
+      ]
+    },
+    {
+      "title": "Learning Technologies Consultant Lead",
+      "company": "UW Information Technology",
+      "location": "Seattle, WA",
+      "period": "Sep 2023 – Present",
+      "type": "Part-time",
+      "impact": "20+ consultants trained",
+      "bullets": [
+        "Led training and onboarding for 20+ technical consultants, redesigning technical curricula and mock ticket systems to improve troubleshooting readiness.",
+        "Delivered Tier-2 support for enterprise platforms (Canvas, Zoom, Panopto) to thousands of UW stakeholders.",
+        "Resolved software bugs, documented solutions, and collaborated with vendors to improve service reliability."
+      ],
+      "tags": [
+        "Leadership",
+        "Technical Support",
+        "Canvas",
+        "Zoom",
+        "Panopto"
+      ]
+    },
+    {
+      "title": "AI Intern",
+      "company": "Orient Software",
+      "location": "Da Nang, Vietnam",
+      "period": "Jun 2023 – Aug 2023",
+      "type": "Internship",
+      "impact": "17% accuracy improvement",
+      "bullets": [
+        "Developed a sales forecasting web application for a supermarket chain using machine learning models with rolling averages, time-lag features, and historical sales data.",
+        "Performed feature engineering, dimensionality reduction, and data cleaning, improving model prediction accuracy by 17%."
+      ],
+      "tags": [
+        "Python",
+        "Machine Learning",
+        "Feature Engineering",
+        "Web App"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "number": "01",
+      "title": "Interactive Efficient Frontier Portfolio Visualizer",
+      "category": "Data Visualization · Finance",
+      "summary": "An interactive tool explaining Modern Portfolio Theory, letting users explore risk/return tradeoffs through live parameter controls.",
+      "problem": "Modern Portfolio Theory is mathematically dense and hard to intuit. Most explanations are static where learners can't feel how changing one variable shifts the entire frontier.",
+      "solution": "Built a D3.js-powered visualization where users drag sliders to adjust asset weights, correlations, and the risk-free rate. The frontier redraws in real-time, making abstract math visceral.",
+      "why": "I wanted to make quantitative finance accessible: the kind of tool I wish I'd had in my Financial Economics classes.",
+      "results": [
+        "Real-time Sharpe ratio & volatility recalculation",
+        "Dynamic Capital Market Line rendering",
+        "Fully interactive asset weight configuration"
+      ],
+      "tools": [
+        "JavaScript",
+        "D3.js",
+        "HTML/CSS",
+        "Statistics"
+      ],
+      "featured": true,
+      "github": "https://github.com/khaitr23",
+      "live": "https://risk-vs-return-de120f.pages.cs.washington.edu/"
+    },
+    {
+      "number": "02",
+      "title": "Distributed Flight Reservation System",
+      "category": "Distributed Systems · Databases",
+      "summary": "A Java backend flight booking system with Azure SQL integration, handling concurrent reservations safely at scale.",
+      "problem": "Flight booking systems handle thousands of concurrent transactions. Without proper locking, double-bookings and race conditions corrupt data and break user trust.",
+      "solution": "Implemented ACID-compliant transactions with two-phase locking and deadlock detection on top of Azure SQL. The system supports 1M+ flight records with guaranteed consistency under high concurrency.",
+      "why": "CSE344 taught me that databases are trust infrastructure. I engineered this system to meet that standard under real concurrency pressure.",
+      "results": [
+        "Handled 1M+ flight records via Azure SQL",
+        "Zero data corruption under concurrent load",
+        "Two-phase locking with automatic deadlock resolution",
+        "Full ACID transaction guarantees"
+      ],
+      "tools": [
+        "Java",
+        "Azure SQL",
+        "ACID Transactions",
+        "2PL",
+        "Deadlock Detection"
+      ],
+      "featured": true,
+      "github": "https://github.com/khaitr23",
+      "live": ""
+    },
+    {
+      "number": "03",
+      "title": "Computer Vision Waste Classification System",
+      "category": "Machine Learning · Computer Vision",
+      "summary": "A ResNet-based model that classifies waste images into compost, recycling, and landfill categories, deployed as a live web app.",
+      "problem": "Contamination in recycling bins costs municipalities millions annually. Most people don't know how to sort waste correctly, and manual sorting is slow and error-prone.",
+      "solution": "Fine-tuned a ResNet architecture on 2,000+ labeled waste images. Built a Flask web app where users upload a photo and receive instant classification with confidence scores.",
+      "why": "I wanted to demonstrate that computer vision can be applied to real sustainability problems and not just academic benchmarks.",
+      "results": [
+        "Trained on 2,000+ images across 3 waste categories",
+        "Real-time image classification via Flask API",
+        "Deployed as a live web application"
+      ],
+      "tools": [
+        "Python",
+        "PyTorch",
+        "ResNet",
+        "Flask",
+        "Computer Vision"
+      ],
+      "featured": false,
+      "github": "https://github.com/khaitr23",
+      "live": ""
+    },
+    {
+      "number": "04",
+      "title": "AstraPath: Supply Chain Route Optimizer",
+      "category": "Graph Databases · Logistics",
+      "summary": "A graph-based supply chain application that lets logistics teams model distribution networks and find optimal routes by cost, speed, distance, or emissions.",
+      "problem": "Real-world supply chains are graphs: factories, warehouses, and endpoints connected by routes, but most tools model them as flat spreadsheets, making multi-hop pathfinding slow, manual, and inaccurate.",
+      "solution": "Built AstraPath on Neo4j AuraDB, a cloud-hosted graph database purpose-built for relationship traversal. Users define their network visually, specify transport modes (truck, plane, train, EV), and CO2 emissions and travel time are auto-calculated. Cypher queries with reduce() over variable-length relationships power the pathfinding engine, while Neovis.js renders the live network graph.",
+      "why": "I wanted to explore graph databases beyond relational SQL for a problem where relationships ARE the data. Supply chain optimization is a perfect fit: the path IS the answer.",
+      "results": [
+        "4 optimization criteria: distance, cost, emissions, and travel time",
+        "Auto-calculated CO2 and time based on transport mode",
+        "Interactive network graph via Neovis.js",
+        "Cypher-powered variable-length pathfinding on Neo4j AuraDB"
+      ],
+      "tools": [
+        "Next.js",
+        "TypeScript",
+        "Neo4j AuraDB",
+        "Neovis.js",
+        "Cypher"
+      ],
+      "featured": true,
+      "github": "https://github.com/khaitr23",
+      "live": ""
+    },
+    {
+      "number": "05",
+      "title": "Duet: Music-Based Dating App",
+      "category": "Mobile · Social · Spotify API",
+      "summary": "A dating app that matches users by music taste using real Spotify listening data, with swipe-based discovery and real-time messaging.",
+      "problem": "Most dating apps rely on photos and demographics, but music taste is one of the most predictive signals of personality and compatibility. There was no app that surfaced genuine listening data as the primary matching signal.",
+      "solution": "Integrated Spotify OAuth to pull each user's top 10 tracks and rank potential matches by track overlap. The more shared listening history, the higher the match score. Built a swipe feed showing name, location, bio, and top 5 tracks with album art. When both users like each other, a Firestore conversation is created instantly. Real-time messaging syncs across both devices with no refresh required.",
+      "why": "A team of 6 developers and I wanted to build a social product where the data actually meant something, where the algorithm reflected real taste rather than surface-level profile signals.",
+      "results": [
+        "Spotify OAuth integration with live top-track data",
+        "Match ranking by track overlap intersection algorithm",
+        "Real-time messaging via Firestore",
+        "4-stage account creation wizard with Firebase Auth",
+        "Collaborated across 6 developers using Git branching and PRs"
+      ],
+      "tools": [
+        "React Native",
+        "Firebase",
+        "Firestore",
+        "Spotify API",
+        "Git"
+      ],
+      "featured": true,
+      "github": "https://github.com/khaitr23",
+      "live": ""
+    },
+    {
+      "number": "06",
+      "title": "Yoga by GiGi: Instructor Portfolio Website & CMS",
+      "category": "Web · Headless CMS · Client Work",
+      "summary": "A Next.js website for a yoga instructor with a Contentful-powered CMS, letting the client manage blogs, retreats, and pages without touching code.",
+      "problem": "Yoga instructors need to publish blog posts, announce retreats, and update pages regularly, but relying on a developer for every content change is slow and expensive. Static sites with hardcoded content don't scale for real clients.",
+      "solution": "Built on Next.js with Contentful as a headless CMS. Defined custom content types (Blog, Retreat, CustomPage) so Gigi can create and edit content through Contentful's UI. A dynamic page builder renders fully configurable sections: headings, text, images, CTAs, video embeds from Contentful data alone. All pages use ISR with 60-second revalidation which are fast like static, yet also fresh like dynamic. Google Maps API renders retreat locations geographically.",
+      "why": "I wanted to build something a real client would use every week. That means the CMS has to be intuitive enough for a non-developer to operate independently.",
+      "results": [
+        "Fully client-managed content via Contentful CMS",
+        "Dynamic page builder: no code changes needed to add sections",
+        "ISR with 60s revalidation for performance and freshness",
+        "Google Maps integration for retreat geolocation",
+        "Delivered documentation to client for content onboarding"
+      ],
+      "tools": [
+        "Next.js",
+        "TypeScript",
+        "Contentful",
+        "Google Maps API",
+        "CSS Modules"
+      ],
+      "featured": false,
+      "github": "https://github.com/khaitr23",
+      "live": ""
+    }
+  ],
+  "skills": {
+    "groups": [
+      {
+        "category": "Languages",
+        "icon": "{}",
+        "skills": [
+          "Python",
+          "TypeScript",
+          "JavaScript",
+          "Java",
+          "C",
+          "C++",
+          "C#",
+          "SQL",
+          "R",
+          "VBA",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "category": "Frameworks & Libraries",
+        "icon": "⚙",
+        "skills": [
+          "Next.js",
+          "React",
+          "Node.js",
+          "Flask",
+          "PyTorch",
+          "TensorFlow",
+          "Pandas",
+          "NumPy",
+          "D3.js"
+        ]
+      },
+      {
+        "category": "Data & ML",
+        "icon": "◈",
+        "skills": [
+          "BERTopic",
+          "NLP",
+          "Computer Vision",
+          "ResNet",
+          "Feature Engineering",
+          "Statistical Modeling",
+          "Clustering",
+          "Data Visualization"
+        ]
+      },
+      {
+        "category": "Tools & Infra",
+        "icon": "▣",
+        "skills": [
+          "Docker",
+          "Git",
+          "GitHub Actions",
+          "Azure SQL",
+          "Firebase",
+          "Linux",
+          "Unix",
+          "Tableau",
+          "CI/CD"
+        ]
+      }
+    ],
+    "coursework": [
+      {
+        "category": "Computer Science",
+        "courses": [
+          {
+            "name": "Algorithms",
+            "url": "https://courses.cs.washington.edu/courses/cse421/"
+          },
+          {
+            "name": "Data Structures & Parallelism",
+            "url": "https://courses.cs.washington.edu/courses/cse332/"
+          },
+          {
+            "name": "AI",
+            "url": "https://courses.cs.washington.edu/courses/cse473/"
+          },
+          {
+            "name": "Systems Programming",
+            "url": "https://courses.cs.washington.edu/courses/cse333/"
+          },
+          {
+            "name": "Software Engineering",
+            "url": "https://courses.cs.washington.edu/courses/cse403/"
+          },
+          {
+            "name": "Database Management",
+            "url": "https://courses.cs.washington.edu/courses/cse344/"
+          },
+          {
+            "name": "Data Visualization",
+            "url": "https://courses.cs.washington.edu/courses/cse442/"
+          },
+          {
+            "name": "Probability Theory & Statistics",
+            "url": "https://courses.cs.washington.edu/courses/cse312/"
+          },
+          {
+            "name": "Linear Algebra",
+            "url": "https://sites.math.washington.edu/~m208/"
+          },
+          {
+            "name": "Discrete Math",
+            "url": "https://courses.cs.washington.edu/courses/cse311/"
+          },
+          {
+            "name": "System Architecture",
+            "url": "https://courses.cs.washington.edu/courses/cse351/"
+          }
+        ]
+      },
+      {
+        "category": "Financial Economics",
+        "courses": [
+          {
+            "name": "Advanced Financial Economics",
+            "url": "https://econ.washington.edu/courses/2026/winter/econ/426/a"
+          },
+          {
+            "name": "Investment, Capital, and Finance",
+            "url": "https://econ.washington.edu/courses/2022/autumn/econ/422/a"
+          },
+          {
+            "name": "Computational Finance and Financial Econometrics",
+            "url": "https://econ.washington.edu/courses/2025/summer/econ/424/a"
+          },
+          {
+            "name": "Econometric Theory and Practice",
+            "url": "https://econ.washington.edu/courses/2025/spring/econ/482/b"
+          },
+          {
+            "name": "Intermediate Macroeconomics",
+            "url": "https://econ.washington.edu/courses/2025/winter/econ/301/b"
+          },
+          {
+            "name": "Intermediate Microeconomics",
+            "url": "https://econ.washington.edu/courses/2024/autumn/econ/300/a"
+          },
+          {
+            "name": "Game Theory",
+            "url": "https://econ.washington.edu/courses/2026/spring/econ/485/a"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "headline": "Let's build something",
+    "subtext": "I'm actively seeking full-time roles in software or data engineering for June 2026. If you have an opportunity, project idea, or just want to connect, feel free to reach out!"
+  }
+}
