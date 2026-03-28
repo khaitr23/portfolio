@@ -130,29 +130,6 @@
   "projects": [
     {
       "number": "01",
-      "title": "Interactive Efficient Frontier Portfolio Visualizer",
-      "category": "Data Visualization · Finance",
-      "summary": "An interactive tool explaining Modern Portfolio Theory, letting users explore risk/return tradeoffs through live parameter controls.",
-      "problem": "Modern Portfolio Theory is mathematically dense and hard to intuit. Most explanations are static where learners can't feel how changing one variable shifts the entire frontier.",
-      "solution": "Built a D3.js-powered visualization where users drag sliders to adjust asset weights, correlations, and the risk-free rate. The frontier redraws in real-time, making abstract math visceral.",
-      "why": "I wanted to make quantitative finance accessible: the kind of tool I wish I'd had in my Financial Economics classes.",
-      "results": [
-        "Real-time Sharpe ratio & volatility recalculation",
-        "Dynamic Capital Market Line rendering",
-        "Fully interactive asset weight configuration"
-      ],
-      "tools": [
-        "JavaScript",
-        "D3.js",
-        "HTML/CSS",
-        "Statistics"
-      ],
-      "featured": true,
-      "github": "",
-      "live": "https://risk-vs-return-de120f.pages.cs.washington.edu/"
-    },
-    {
-      "number": "02",
       "title": "AstraPath: Supply Chain Route Optimizer",
       "category": "Graph Databases · Logistics",
       "summary": "A full-stack graph application that lets logistics teams model distribution networks and find optimal multi-hop routes across cost, speed, distance, and CO₂ emissions with real-time market condition simulation.",
@@ -177,6 +154,29 @@
       "featured": true,
       "github": "https://github.com/khaitr23/AstraPath",
       "live": "https://astra-path-routeiq.vercel.app/"
+    },
+    {
+      "number": "02",
+      "title": "Interactive Efficient Frontier Portfolio Visualizer",
+      "category": "Data Visualization · Finance",
+      "summary": "An interactive tool explaining Modern Portfolio Theory, letting users explore risk/return tradeoffs through live parameter controls.",
+      "problem": "Modern Portfolio Theory is mathematically dense and hard to intuit. Most explanations are static where learners can't feel how changing one variable shifts the entire frontier.",
+      "solution": "Built a D3.js-powered visualization where users drag sliders to adjust asset weights, correlations, and the risk-free rate. The frontier redraws in real-time, making abstract math visceral.",
+      "why": "I wanted to make quantitative finance accessible: the kind of tool I wish I'd had in my Financial Economics classes.",
+      "results": [
+        "Real-time Sharpe ratio & volatility recalculation",
+        "Dynamic Capital Market Line rendering",
+        "Fully interactive asset weight configuration"
+      ],
+      "tools": [
+        "JavaScript",
+        "D3.js",
+        "HTML/CSS",
+        "Statistics"
+      ],
+      "featured": true,
+      "github": "",
+      "live": "https://risk-vs-return-de120f.pages.cs.washington.edu/"
     },
     {
       "number": "03",
@@ -205,56 +205,6 @@
     },
     {
       "number": "04",
-      "title": "Computer Vision Waste Classification System",
-      "category": "Machine Learning · Computer Vision",
-      "summary": "A ResNet-based model that classifies waste images into compost, recycling, and landfill categories, deployed as a live web app.",
-      "problem": "Contamination in recycling bins costs municipalities millions annually. Most people don't know how to sort waste correctly, and manual sorting is slow and error-prone.",
-      "solution": "Fine-tuned a ResNet architecture on 2,000+ labeled waste images. Built a Flask web app where users upload a photo and receive instant classification with confidence scores.",
-      "why": "I wanted to demonstrate that computer vision can be applied to real sustainability problems and not just academic benchmarks.",
-      "results": [
-        "Trained on 2,000+ images across 3 waste categories",
-        "Real-time image classification via Flask API",
-        "Deployed as a live web application"
-      ],
-      "tools": [
-        "Python",
-        "PyTorch",
-        "ResNet",
-        "Flask",
-        "Computer Vision"
-      ],
-      "featured": false,
-      "github": "https://github.com/khaitr23/WasteSortingTrain",
-      "live": "https://www.youtube.com/watch?v=Alx6yoTuk7A"
-    },
-    {
-      "number": "05",
-      "title": "Duet: Music-Based Dating App",
-      "category": "Mobile · Social · Spotify API",
-      "summary": "A dating app that matches users by music taste using real Spotify listening data, with swipe-based discovery and real-time messaging.",
-      "problem": "Most dating apps rely on photos and demographics, but music taste is one of the most predictive signals of personality and compatibility. There was no app that surfaced genuine listening data as the primary matching signal.",
-      "solution": "Integrated Spotify OAuth to pull each user's top 10 tracks and rank potential matches by track overlap. The more shared listening history, the higher the match score. Built a swipe feed showing name, location, bio, and top 5 tracks with album art. When both users like each other, a Firestore conversation is created instantly. Real-time messaging syncs across both devices with no refresh required.",
-      "why": "A team of 6 developers and I wanted to build a social product where the data actually meant something, where the algorithm reflected real taste rather than surface-level profile signals.",
-      "results": [
-        "Spotify OAuth integration with live top-track data",
-        "Match ranking by track overlap intersection algorithm",
-        "Real-time messaging via Firestore",
-        "4-stage account creation wizard with Firebase Auth",
-        "Collaborated across 6 developers using Git branching and PRs"
-      ],
-      "tools": [
-        "React Native",
-        "Firebase",
-        "Firestore",
-        "Spotify API",
-        "Git"
-      ],
-      "featured": true,
-      "github": "https://github.com/karlabelem/DUET",
-      "live": ""
-    },
-    {
-      "number": "06",
       "title": "Mini Google: Full-Stack Search Engine in C/C++",
       "category": "Systems Programming · C / C++",
       "summary": "A full-stack search engine built entirely from scratch in C and C++, from custom data structures to a browser-accessible web interface. Type a query in your browser and ranked results come back in milliseconds — served dynamically from disk.",
@@ -287,7 +237,7 @@
       "live": ""
     },
     {
-      "number": "07",
+      "number": "05",
       "title": "Yoga by GiGi: Instructor Portfolio Website & CMS",
       "category": "Web · Headless CMS · Client Work",
       "summary": "A Next.js website for a yoga instructor with a Contentful-powered CMS, letting the client manage blogs, retreats, and pages without touching code.",
@@ -311,6 +261,56 @@
       "featured": false,
       "github": "https://github.com/khaitr23/yoga-by-gigi",
       "live": "https://yoga-by-gigi.vercel.app/"
+    },
+    {
+      "number": "06",
+      "title": "Duet: Music-Based Dating App",
+      "category": "Mobile · Social · Spotify API",
+      "summary": "A dating app that matches users by music taste using real Spotify listening data, with swipe-based discovery and real-time messaging.",
+      "problem": "Most dating apps rely on photos and demographics, but music taste is one of the most predictive signals of personality and compatibility. There was no app that surfaced genuine listening data as the primary matching signal.",
+      "solution": "Integrated Spotify OAuth to pull each user's top 10 tracks and rank potential matches by track overlap. The more shared listening history, the higher the match score. Built a swipe feed showing name, location, bio, and top 5 tracks with album art. When both users like each other, a Firestore conversation is created instantly. Real-time messaging syncs across both devices with no refresh required.",
+      "why": "A team of 6 developers and I wanted to build a social product where the data actually meant something, where the algorithm reflected real taste rather than surface-level profile signals.",
+      "results": [
+        "Spotify OAuth integration with live top-track data",
+        "Match ranking by track overlap intersection algorithm",
+        "Real-time messaging via Firestore",
+        "4-stage account creation wizard with Firebase Auth",
+        "Collaborated across 6 developers using Git branching and PRs"
+      ],
+      "tools": [
+        "React Native",
+        "Firebase",
+        "Firestore",
+        "Spotify API",
+        "Git"
+      ],
+      "featured": true,
+      "github": "https://github.com/karlabelem/DUET",
+      "live": ""
+    },
+    {
+      "number": "07",
+      "title": "Computer Vision Waste Classification System",
+      "category": "Machine Learning · Computer Vision",
+      "summary": "A ResNet-based model that classifies waste images into compost, recycling, and landfill categories, deployed as a live web app.",
+      "problem": "Contamination in recycling bins costs municipalities millions annually. Most people don't know how to sort waste correctly, and manual sorting is slow and error-prone.",
+      "solution": "Fine-tuned a ResNet architecture on 2,000+ labeled waste images. Built a Flask web app where users upload a photo and receive instant classification with confidence scores.",
+      "why": "I wanted to demonstrate that computer vision can be applied to real sustainability problems and not just academic benchmarks.",
+      "results": [
+        "Trained on 2,000+ images across 3 waste categories",
+        "Real-time image classification via Flask API",
+        "Deployed as a live web application"
+      ],
+      "tools": [
+        "Python",
+        "PyTorch",
+        "ResNet",
+        "Flask",
+        "Computer Vision"
+      ],
+      "featured": false,
+      "github": "https://github.com/khaitr23/WasteSortingTrain",
+      "live": "https://www.youtube.com/watch?v=Alx6yoTuk7A"
     }
   ],
   "skills": {
