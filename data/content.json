@@ -153,6 +153,33 @@
     },
     {
       "number": "02",
+      "title": "AstraPath: Supply Chain Route Optimizer",
+      "category": "Graph Databases · Logistics",
+      "summary": "A full-stack graph application that lets logistics teams model distribution networks and find optimal multi-hop routes across cost, speed, distance, and CO₂ emissions with real-time market condition simulation.",
+      "problem": "Supply chains are inherently graph problems: factories, warehouses, and endpoints connected by routes with competing tradeoffs. Most tools flatten this into spreadsheets, making multi-hop optimization slow, manual, and blind to real-world conditions like fuel prices or port congestion.",
+      "solution": "AstraPath lets users visually build a logistics network on an interactive canvas, then find optimal paths using a Cypher-powered engine that evaluates all routes simultaneously. Users drag-and-drop to prioritize criteria (cheapest, fastest, greenest, shortest), and the backend returns the Pareto-dominant path using variable-length graph traversal with dynamic CASE expressions for condition multipliers. Edge labels update live as market sliders change, with CO₂ calculated using DEFRA 2023 GHG conversion factors per transport mode. Each user gets a private Neo4j workspace via Clerk auth, with guest mode for instant zero-friction access.",
+      "why": "I wanted to go beyond relational SQL for a problem where relationships are the data. Graph databases make multi-hop pathfinding a first-class operation: what would be a recursive CTE in SQL is a single MATCH in Cypher.",
+      "results": [
+        "Pareto-dominant pathfinding across 4 simultaneous criteria with user-defined drag-to-reorder priority",
+        "Live CO₂ simulation using DEFRA 2023 GHG factors across trucks, rail, air, and EV",
+        "Multi-tenant isolation on a shared Neo4j instance: all queries scoped by tenantId with zero data leakage between users",
+        "Persistent node positions, custom type definitions, and graph state surviving hard reloads via Neo4j storage"
+      ],
+      "tools": [
+        "Next.js",
+        "TypeScript",
+        "Neo4j AuraDB",
+        "Neovis.js",
+        "Cypher",
+        "Clerk",
+        "react-force-graph"
+      ],
+      "featured": true,
+      "github": "https://github.com/khaitr23/AstraPath",
+      "live": "https://astra-path-routeiq.vercel.app/"
+    },
+    {
+      "number": "03",
       "title": "Distributed Flight Reservation System",
       "category": "Distributed Systems · Databases",
       "summary": "A Java backend flight booking system with Azure SQL integration, handling concurrent reservations safely at scale.",
@@ -177,7 +204,7 @@
       "live": ""
     },
     {
-      "number": "03",
+      "number": "04",
       "title": "Computer Vision Waste Classification System",
       "category": "Machine Learning · Computer Vision",
       "summary": "A ResNet-based model that classifies waste images into compost, recycling, and landfill categories, deployed as a live web app.",
@@ -199,31 +226,6 @@
       "featured": false,
       "github": "https://github.com/khaitr23/WasteSortingTrain",
       "live": "https://www.youtube.com/watch?v=Alx6yoTuk7A"
-    },
-    {
-      "number": "04",
-      "title": "AstraPath: Supply Chain Route Optimizer",
-      "category": "Graph Databases · Logistics",
-      "summary": "A graph-based supply chain application that lets logistics teams model distribution networks and find optimal routes by cost, speed, distance, or emissions.",
-      "problem": "Real-world supply chains are graphs: factories, warehouses, and endpoints connected by routes, but most tools model them as flat spreadsheets, making multi-hop pathfinding slow, manual, and inaccurate.",
-      "solution": "Built AstraPath on Neo4j AuraDB, a cloud-hosted graph database purpose-built for relationship traversal. Users define their network visually, specify transport modes (truck, plane, train, EV), and CO2 emissions and travel time are auto-calculated. Cypher queries with reduce() over variable-length relationships power the pathfinding engine, while Neovis.js renders the live network graph.",
-      "why": "I wanted to explore graph databases beyond relational SQL for a problem where relationships ARE the data. Supply chain optimization is a perfect fit: the path IS the answer.",
-      "results": [
-        "4 optimization criteria: distance, cost, emissions, and travel time",
-        "Auto-calculated CO2 and time based on transport mode",
-        "Interactive network graph via Neovis.js",
-        "Cypher-powered variable-length pathfinding on Neo4j AuraDB"
-      ],
-      "tools": [
-        "Next.js",
-        "TypeScript",
-        "Neo4j AuraDB",
-        "Neovis.js",
-        "Cypher"
-      ],
-      "featured": true,
-      "github": "https://github.com/khaitr23/AstraPath",
-      "live": ""
     },
     {
       "number": "05",
